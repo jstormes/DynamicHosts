@@ -12,6 +12,8 @@ I want my hosts file to automagicly get updated when I create a new directory.
 
 With a little help from Apple's [launched](https://developer.apple.com/library/mac/documentation/Darwin/Reference/ManPages/man8/launchd.8.html) this script can automate your /etc/hosts file.
 
+See the blog post at [stormes.net](http://www.stormes.net/automatic-etchosts-apples-os/).
+
 #### Quick Start
 
 Step 0:

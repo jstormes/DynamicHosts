@@ -3,7 +3,7 @@
 
 /**
  * Class to convert {$path}/directories/subdirectories into
- * subdmoains.domain.  Also checks that for new files less than
+ * subdomains.domains.  Also checks that for new files less than
  * $dirtyTime old.
  * 
  * @author jstormes
