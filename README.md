@@ -22,14 +22,22 @@ Backup your original hosts file.
     sudo cp -p /etc/hosts /etc/hosts.org
 
 Step 1:
-Edit the file DynamicHosts.plist and change the two string entries that have "/usr/local/zend/apache2/htdocs/" to the path of your webroot.  You must includ the trailing "/".
+Copy the dynamic_hosts.php file into /bin.
 
 Step 2:
+Set /bin/dynamic_hosts.php to be executable
+
+    sudo chmod a+x /bin/dynamic_hosts.php
+
+Step 3:
+Edit the file DynamicHosts.plist and change the two string entries that have "/usr/local/zend/apache2/htdocs/" to the path of your webroot.  You must include the trailing "/".
+
+Step 4:
 Copy DynamicHosts.plist to /System/Library/LaunchAgents/
 
     sudo cp DynamicHosts.plist /System/Library/LaunchAgents/
 
-Step 3:
+Step 5:
 Start the monitoring.
 
 	sudo launchctl load /System/Library/LaunchAgents/DynamicHosts.plist
@@ -39,5 +47,5 @@ In your webroot create a new directory.  Inside that directory create a director
 
 If you cat out your /etc/hosts your new direcotry/sub-directory should appear at the bottom of your hosts file as 127.0.0.1 sub-direcotry.directory
 
-Step 4:
+Step 6:
 Using [mod_vhost_alias](http://httpd.apache.org/docs/2.2/mod/mod_vhost_alias.html) in Apache, it is now possible to create a development website just by createing directories.
